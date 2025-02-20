@@ -13,9 +13,107 @@
         }
         img {
             display: block;
-            margin: 10px auto;
+            margin: 20px auto;
             max-width: 100%;
             height: auto;
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Navigation Menu */
+        nav ul li a {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #FFD700;
+            transform: scale(1.1);
+        }
+
+        /* Header Section */
+        header {
+            background: url('https://source.unsplash.com/1600x900/?rome,italy') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+        header h1 {
+            font-size: 4rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            z-index: 1;
+        }
+        header p {
+            font-size: 1.6rem;
+            font-style: italic;
+            z-index: 1;
+            font-weight: bold;
+            z-index: 1;
+        }
+        header .welcome-intro {
+            font-size: 1.5rem;
+            background: rgba(255, 215, 0, 0.15);
+            padding: 1.5rem;
+            border-radius: 10px;
+            max-width: 80%;
+            margin: 1.5rem auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 4rem 2rem;
+            margin: 3rem auto;
+            max-width: 900px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        section h2 {
+            color: #9B111E;
+            font-size: 2.4rem;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1.5rem;
+        }
+        section p {
+            color: #444;
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #333;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header p {
+                font-size: 1.4rem;
+            }
+            section {
+                padding: 3rem;
+            }
+            .welcome-intro {
+                font-size: 1.3rem;
+                max-width: 90%;
+            }
+            img {
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -57,15 +155,15 @@
     <!-- Images of Rome -->
     <section id="images">
         <h2>Discover Rome</h2>
-        <img src="images/colosseum.jpg" alt="The Colosseum in Rome" width="300">
-        <img src="images/pantheon.jpg" alt="The Pantheon" width="300">
-        <img src="images/sistine-chapel.jpg" alt="The Sistine Chapel" width="300">
+        <img src="images/colosseum.jpg" alt="The Colosseum in Rome">
+        <img src="images/pantheon.jpg" alt="The Pantheon">
+        <img src="images/sistine-chapel.jpg" alt="The Sistine Chapel">
     </section>
 
     <!-- Map of Italy -->
     <section id="map">
         <h2>Where is Rome?</h2>
-        <img src="images/map-italy.jpg" alt="Map of Italy with Rome highlighted" width="400">
+        <img src="images/map-italy.jpg" alt="Map of Italy with Rome highlighted">
     </section>
 
     <!-- Country Basics List -->
