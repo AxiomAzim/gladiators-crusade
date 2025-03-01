@@ -1,3 +1,6 @@
+console.log("Script is running!");
+alert("JavaScript is working!");
+
 console.log("JavaScript is running!");
 
 // Example: Adding interactivity to the "Learn More" button
