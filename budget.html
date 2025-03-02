@@ -11,12 +11,12 @@
         <h1>Gladiator's Crusade</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="itinerary.html">Itinerary</a></li>
-                <li><a href="flights.html">Flights</a></li>
-                <li><a href="budget.html" class="active">Cost/Budget</a></li>
-                <li><a href="packing.html">Packing List</a></li>
-                <li><a href="virtual.html">Virtual Tour</a></li>
+                <li><a href="index.html" aria-label="Home Page">Home</a></li>
+                <li><a href="itinerary.html" aria-label="View Itinerary">Itinerary</a></li>
+                <li><a href="flights.html" aria-label="View Flight Details">Flights</a></li>
+                <li><a href="budget.html" class="active" aria-label="View Budget and Costs">Cost/Budget</a></li>
+                <li><a href="packing.html" aria-label="View Packing List">Packing List</a></li>
+                <li><a href="virtual.html" aria-label="Take a Virtual Tour">Virtual Tour</a></li>
             </ul>
         </nav>
     </header>
@@ -65,10 +65,10 @@
             </table>
 
             <h3>Currency Exchange Note</h3>
-            <p><strong>Rome uses the Euro (€)</strong>. As of today, <strong>1 USD ≈ 0.92 EUR</strong>. Keep in mind that exchange rates fluctuate, so check for updated rates before your trip.</p>
+            <p><strong>Rome uses the Euro (€)</strong>. As of March 2, 2025, <strong>1 USD ≈ 0.9613 EUR</strong>. Keep in mind that exchange rates fluctuate, so check for updated rates before your trip.</p>
 
             <h3>Work Equivalent</h3>
-            <p>At Minnesota's minimum wage of **$10.85/hour**, you'd need to work approximately **378 hours** to afford this trip.</p>
+            <p>At Minnesota's minimum wage of <strong>$11.13/hour</strong>, you'd need to work approximately <strong>368 hours</strong> to afford this trip.</p>
         </section>
     </main>
     
@@ -77,5 +77,25 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Change navbar transparency on scroll
+        window.addEventListener("scroll", function () {
+            let navbar = document.querySelector("nav");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+
+        // Highlight the active link in the navbar
+        document.querySelectorAll("nav ul li a").forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add("active");
+            }
+        });
+    </script>
+    
+    <img src="images/colosseum.jpg" alt="The Colosseum in Rome" loading="lazy">
 </body>
 </html>
