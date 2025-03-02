@@ -93,5 +93,26 @@
     <footer>
         <p>&copy; 2025 Gladiator's Crusade. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Change navbar transparency on scroll
+        window.addEventListener("scroll", function () {
+            let navbar = document.querySelector("nav");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+    
+    <script>
+        // Highlight the active link in the navbar
+        document.querySelectorAll("nav ul li a").forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add("active");
+            }
+        });
+    </script>
 </body>
 </html>
