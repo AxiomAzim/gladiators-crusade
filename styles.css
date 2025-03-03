@@ -6,6 +6,8 @@ body {
     background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -30,18 +32,17 @@ nav {
     z-index: 1000;
 }
 
-/* Make navbar fully opaque when at the top */
 .scrolled {
     background-color: rgba(101, 0, 0, 1);
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -80,7 +81,6 @@ html {
     position: relative;
 }
 
-/* Semi-transparent overlay */
 .hero::before {
     content: "";
     position: absolute;
@@ -222,14 +222,14 @@ table tr:nth-child(even) {
     font-size: 18px;
 }
 
-/* Images with Lazy Loading */
+/* Lazy Load Images */
 img[loading="lazy"] {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Improved Accessibility for Navigation */
+/* Accessibility */
 nav ul li a:focus {
     outline: 3px solid #fff;
     background: rgba(255, 255, 255, 0.2);
@@ -240,6 +240,7 @@ nav ul li a:focus {
     nav ul {
         flex-direction: column;
         text-align: center;
+        padding: 0;
     }
 
     nav ul li {
@@ -262,5 +263,15 @@ nav ul li a:focus {
     .attractions {
         flex-direction: column;
         align-items: center;
+    }
+
+    /* Budget Section */
+    .budget {
+        width: 90%;
+        padding: 20px;
+    }
+
+    table th, table td {
+        padding: 10px;
     }
 }
